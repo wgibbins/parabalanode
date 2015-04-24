@@ -1,9 +1,9 @@
 var sys = require("sys"),  
 my_http = require("http");  
 my_http.createServer(function(request,response){  
-   // console.log("I got kicked");  
+   console.log("I got kicked at " + request.url);  
 	var parts = require('url').parse(request.url, true);
-	// console.log(JSON.stringify(parts.query.b));
+	console.log(JSON.stringify(parts.query.x));
 	var x = Number(parts.query.x);
 	var a = Number(parts.query.a);
 	var b = Number(parts.query.b);
